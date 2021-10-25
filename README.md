@@ -1,4 +1,4 @@
-# PySimpleGraph
+# Tiny DAG
 
 Bare bones implementation of computation (directed, acyclic) graph for Python.
 
