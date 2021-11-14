@@ -17,7 +17,7 @@ class GraphError(Exception):
 
 class Graph:
     """
-    Minimal implementation for computational (directed, acyclic) graph.
+    Minimal implementation of computational (directed, acyclic) graph.
 
     User provides graph structure (nodes) and input data for graph. Every node waits until input data for that node
     is ready. Eventually, graph executes every node in graph and returns output of every node as result.
@@ -30,12 +30,19 @@ class Graph:
         :param nodes: List of nodes.
         :param wrappers: Optional wrapper functions that will be used to wrap all functions in nodes.
 
-        User needs to specify inputs, function and name for every node. For example:
+        User needs to specify inputs, function and name for every node.
+
+        Example:
+
+        add = lambda a, b: a + b
+        mul = lambda a, b: a * b
+        div = lambda a, b: a / b
+
         nodes = [
-            Node(["x", "y"], add, "add1"),
             Node(["add1", "x"], add, "add2"),
             Node(["add1", "add2"], mul, "mul"),
-            Node(["mul", "z"], divide, "div"),
+            Node(["x", "y"], add, "add1"),
+            Node(["mul", "z"], div, "div"),
         ]
 
         where add, mul and div are functions. This determines graph where

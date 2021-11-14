@@ -6,28 +6,11 @@ from node import Node
 logging.basicConfig(level=logging.DEBUG)
 
 
-def print_input(func):
-    def inner(*args, **kwargs):
-        print(f"Input for function {func}: {args}, {kwargs}")
-        out = func(*args, **kwargs)
-        return out
-
-    return inner
-
-
-def add(a, b):
-    return a + b
-
-
-def mul(a, b):
-    return a * b
-
-
-def div(a, b):
-    return a / b
-
-
 def main():
+    add = lambda a, b: a + b
+    mul = lambda a, b: a * b
+    div = lambda a, b: a / b
+
     nodes = [
         Node(["add1", "x"], add, "add2"),
         Node(["add1", "add2"], mul, "mul"),
@@ -35,7 +18,7 @@ def main():
         Node(["mul", "z"], div, "div"),
     ]
 
-    graph = Graph(nodes, wrappers=[print_input])
+    graph = Graph(nodes)
     print("Graph: ", graph)
     graph.render()
 
