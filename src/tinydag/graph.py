@@ -6,7 +6,7 @@ from typing import List, Callable, Union
 import graphviz as graphviz
 from graphviz import Digraph
 
-from node import Node
+from src.tinydag.node import Node
 
 logger = logging.getLogger(__name__)
 

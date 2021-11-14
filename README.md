@@ -7,9 +7,22 @@ Bare bones implementation of computation (directed, acyclic) graph for Python.
 - Python >= 3.6
 - graphviz
 
+# Installation
+
+Binary installers for the latest released version are available at the Python Package Index (PyPI):
+https://pypi.org/project/tiny-dag/
+
+Install by typing
+```
+pip3 install tiny-dag
+```
+
 # Usage example
 
 ```
+from tinydag.graph import Graph
+from tinydag.node import Node
+
 add = lambda a, b: a + b
 mul = lambda a, b: a * b
 div = lambda a, b: a / b

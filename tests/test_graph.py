@@ -1,8 +1,8 @@
 import unittest
 from functools import partial
 
-from graph import Graph, GraphError
-from node import Node
+from src.tinydag.graph import Graph, GraphError
+from src.tinydag.node import Node
 
 
 def add(a, b):

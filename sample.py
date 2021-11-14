@@ -1,7 +1,7 @@
 import logging
 
-from graph import Graph
-from node import Node
+from src.tinydag.graph import Graph
+from src.tinydag.node import Node
 
 logging.basicConfig(level=logging.DEBUG)
 
